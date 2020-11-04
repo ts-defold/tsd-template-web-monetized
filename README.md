@@ -94,6 +94,11 @@ The details table contains additional information about the event. Example:
 }
 ```
 
+### Awesome
+Checkout [https://github.com/thomasbnt/awesome-web-monetization](Awesome Web Monetization) for more tools, packages, tutorials, etc.  
+Install [https://github.com/esse-dev/akita](Akita) to explore how Web Monetization works.  
+Sign-up for [https://coil.com/](Coil) to start sending micro-payments now!  
+
 <p align="center" class="h4">
   TypeScript :heart: Defold
 </p>
