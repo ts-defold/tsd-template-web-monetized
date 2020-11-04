@@ -6,7 +6,7 @@ export function init(this: unknown): void {
 			print("The user has an active payment stream");
 		}
 
-		webmonetization.set_listener(function(this: unknown, event: webmonetization.Event) {
+		webmonetization.set_listener(function(this: unknown, event: webmonetization.Event, details?: webmonetization.EventDetails) {
 			if (event == webmonetization.EVENT_PENDING) {
 				print("The user is trying to make a first payment");
 			} else if (event == webmonetization.EVENT_START) {
@@ -16,6 +16,7 @@ export function init(this: unknown): void {
 			} else if (event == webmonetization.EVENT_STOP) {
 				print("The user has stopped paying");
 			}
+			print(details?.requestId);
 		});
 	}
 }
