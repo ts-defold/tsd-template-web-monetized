@@ -84,13 +84,13 @@ if (webmonetization != null) {
 
 The details table contains additional information about the event. Example:
 
-```json
+```js
 {
-  paymentPointer = "$ilp.uphold.com/QkG86UgXzKq8",
-  assetScale = 9,
-  amount = "26009",
-  requestId = "a1f728aa-21e0-4376-ae99-0ccb22642956",
-  assetCode = "XRP"
+  paymentPointer: "$ilp.uphold.com/QkG86UgXzKq8",
+  assetScale: 9,
+  amount: "26009",
+  requestId: "a1f728aa-21e0-4376-ae99-0ccb22642956",
+  assetCode: "XRP"
 }
 ```
 
