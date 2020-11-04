@@ -6,7 +6,7 @@
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "moduleResolution": "node",
-        "types": ["@ts-defold/types"],
+        "types": ["@ts-defold/types", "./src/types"],
 
         "rootDir": "src",
         "outDir": "app",

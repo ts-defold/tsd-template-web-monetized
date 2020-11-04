@@ -13,10 +13,14 @@ update_frequency = 60
 input_method = HiddenInputField
 
 [project]
-title = tsd-template
+title = Web Monetized Game
+dependencies = https://github.com/defold/extension-webmonetization/archive/master.zip
 
 [render]
 clear_color_red = 0.19
 clear_color_green = 0.47
 clear_color_blue = 0.78
+
+[webmonetization]
+payment_pointer = $ilp.uphold.com/hGqBNJM932UJ
 
