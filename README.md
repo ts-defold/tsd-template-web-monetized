@@ -27,7 +27,7 @@ npm install
 ```bash
 npm run build # Transpile the TypeScript files to lua
 # or
-npm run watch # Watch for changes and regenerate files on save
+npm run dev # Watch for changes and regenerate files on save
 ```
 
 4. Code
