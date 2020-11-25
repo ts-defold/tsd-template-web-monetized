@@ -31,4 +31,4 @@ jobs:
       run: npm run build
 
     - name: Build
-      run: java -jar bob.jar --root ./app --archive --platform js-web resolve distclean build bundle
+      run: java -jar bob.jar --root ./app --archive --platform js-web --verbose resolve distclean build bundle
