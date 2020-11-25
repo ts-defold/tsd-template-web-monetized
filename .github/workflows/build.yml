@@ -25,7 +25,8 @@ jobs:
       run: wget -O bob.jar https://github.com/defold/defold/releases/download/1.2.175/bob.bob.jar
       
     - name: Genrate lua w/ ts-defold
-      run: npm install & npm run build
+    - run: npm install
+    - run: npm run build
 
     - name: Build
       run: java -jar bob.jar --input ./app -root ./app --output ./app/build --archive --platform js-web resolve distclean build bundle
