@@ -22,7 +22,7 @@ jobs:
         java-version: 11.0.x
 
     - name: Retrieve Bob Builder
-      run: wget https://github.com/defold/defold/releases/download/1.2.175/bob.bob.jar bob.jar
+      run: wget -O bob.jar https://github.com/defold/defold/releases/download/1.2.175/bob.bob.jar
       
     - name: Genrate lua w/ ts-defold
       run: npm install & npm run build
