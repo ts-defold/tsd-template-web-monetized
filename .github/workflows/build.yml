@@ -24,9 +24,11 @@ jobs:
     - name: Retrieve Bob Builder
       run: wget -O bob.jar https://github.com/defold/defold/releases/download/1.2.175/bob.bob.jar
       
+    - name: Install Dependencies
+      run: npm install
+      
     - name: Genrate lua w/ ts-defold
-    - run: npm install
-    - run: npm run build
+      run: npm run build
 
     - name: Build
       run: java -jar bob.jar --input ./app -root ./app --output ./app/build --archive --platform js-web resolve distclean build bundle
