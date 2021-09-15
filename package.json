@@ -1,6 +1,6 @@
 {
   "name": "tsd-template-web-monetized",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This template contains everything you need to start building a game for HTML5 with Web Monetization enabled",
   "repository": "github:ts-defold/tsd-template-web-monetized",
   "keywords": [
