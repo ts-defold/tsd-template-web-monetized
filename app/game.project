@@ -13,8 +13,9 @@ update_frequency = 60
 input_method = HiddenInputField
 
 [project]
-title = Web Monetized Game
-dependencies = https://github.com/defold/extension-webmonetization/archive/master.zip
+title = tsd-template-web-monetized
+dependencies#0 = https://github.com/ts-defold/defold-lldebugger/archive/extension.zip
+dependencies#1 = https://github.com/defold/extension-webmonetization/archive/master.zip
 
 [render]
 clear_color_red = 0.19
