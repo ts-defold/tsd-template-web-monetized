@@ -1,3 +1,7 @@
+// Debugging support
+import * as lldebugger from "lldebugger.debug";
+lldebugger.start();
+
 export function init(this: unknown): void {
 	if (webmonetization != null) {
 		const monetized = webmonetization.is_monetized();
