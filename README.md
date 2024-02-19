@@ -60,7 +60,7 @@ payment_pointer = ADD PAYMENT POINTER HERE
 When the extension and a payment pointer has been added to the **game.project** file it is possible to interact with the Web Monetization API from Defold:
 
 ```ts
-if (webmonetization != null) {
+if (webmonetization != undefined) {
     const monetized = webmonetization.is_monetized();
 
     if (monetized) {

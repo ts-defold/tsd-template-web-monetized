@@ -3,7 +3,7 @@ import * as lldebugger from "lldebugger.debug";
 lldebugger.start();
 
 export function init(this: unknown): void {
-	if (webmonetization != null) {
+	if (webmonetization !== undefined) {
 		const monetized = webmonetization.is_monetized();
 
 		if (monetized) {
@@ -11,13 +11,13 @@ export function init(this: unknown): void {
 		}
 
 		webmonetization.set_listener(function(this: unknown, event: webmonetization.Event, details?: webmonetization.EventDetails) {
-			if (event == webmonetization.EVENT_PENDING) {
+			if (event === webmonetization.EVENT_PENDING) {
 				print("The user is trying to make a first payment");
-			} else if (event == webmonetization.EVENT_START) {
+			} else if (event === webmonetization.EVENT_START) {
 				print("The user has started paying");
-			} else if (event == webmonetization.EVENT_PROGRESS) {
+			} else if (event === webmonetization.EVENT_PROGRESS) {
 				print("The user is still paying");
-			} else if (event == webmonetization.EVENT_STOP) {
+			} else if (event === webmonetization.EVENT_STOP) {
 				print("The user has stopped paying");
 			}
 			print(details?.requestId);
