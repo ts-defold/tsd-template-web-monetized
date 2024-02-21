@@ -5,7 +5,6 @@
         "lib": ["es2019"],
         "module": "commonjs",
         "esModuleInterop": true,
-        "experimentalDecorators": true,
         "moduleResolution": "node",
         "types": ["types", "language-extensions"],
         "typeRoots": [
@@ -22,7 +21,7 @@
         "noUnusedParameters": false,
         "sourceMap": true,
 
-        "plugins": [{ "name": "typescript-tstl-plugin" }],
+        "plugins": [{ "name": "typescript-tstl-plugin" }]
     },
     "exclude": [
         "./node_modules/*",
