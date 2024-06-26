@@ -1,16 +1,17 @@
 # Web Monetization
+
 <a href="https://discord.gg/eukcq5m"><img alt="Chat with us!" src="https://img.shields.io/discord/766898804896038942.svg?colorB=7581dc&logo=discord&logoColor=white"></a>
 
 [Web Monetization](https://webmonetization.org/) is a JavaScript browser API which allows the creation of a payment stream from the user agent to the website. Web Monetization is being proposed as a W3C standard at the Web Platform Incubator Community Group.
-
 
 ## Web Monetization for Defold
 
 This repository contains a native extension which integrates the Web Monetization JavaScript API with the [Defold game engine](https://www.defold.com). This allows game developers to detect if a player has an active payment stream or not and offer additional content or perks to paying players.
 
-
 ### Installation
+
 1. Fork this template or use [degit](https://www.npmjs.com/package/degit) to download the template locally
+
 ```bash
 npx degit ts-defold/tsd-template-web-monetized my-web-monetized-game
 # or
@@ -18,12 +19,14 @@ git clone https://github.com/ts-defold/tsd-template-web-monetized.git my-web-mon
 ```
 
 2. Initialize
+
 ```bash
 cd my-web-monetized-game
 npm install
 ```
 
 3. Generate
+
 ```bash
 npm run build # Transpile the TypeScript files to lua
 # or
@@ -31,11 +34,13 @@ npm run dev # Watch for changes and regenerate files on save
 ```
 
 4. Code
+
 ```
 code .
 ```
 
 5. Open `app/game.project` in Defold
+
 - Start making games with TypesScript!
 
 #### Project dependency
@@ -61,24 +66,28 @@ When the extension and a payment pointer has been added to the **game.project** 
 
 ```ts
 if (webmonetization !== undefined) {
-    const monetized = webmonetization.is_monetized();
+	const monetized = webmonetization.is_monetized();
 
-    if (monetized) {
-        print("The user has an active payment stream");
-    }
+	if (monetized) {
+		print('The user has an active payment stream');
+	}
 
-    webmonetization.set_listener(function(this: unknown, event: webmonetization.Event, details?: webmonetization.EventDetails) {
-        if (event == webmonetization.EVENT_PENDING) {
-            print("The user is trying to make a first payment");
-        } else if (event == webmonetization.EVENT_START) {
-            print("The user has started paying");
-        } else if (event == webmonetization.EVENT_PROGRESS) {
-            print("The user is still paying");
-        } else if (event == webmonetization.EVENT_STOP) {
-            print("The user has stopped paying");
-        }
-        print(details?.requestId);
-    });
+	webmonetization.set_listener(function (
+		this: unknown,
+		event: webmonetization.Event,
+		details?: webmonetization.EventDetails,
+	) {
+		if (event == webmonetization.EVENT_PENDING) {
+			print('The user is trying to make a first payment');
+		} else if (event == webmonetization.EVENT_START) {
+			print('The user has started paying');
+		} else if (event == webmonetization.EVENT_PROGRESS) {
+			print('The user is still paying');
+		} else if (event == webmonetization.EVENT_STOP) {
+			print('The user has stopped paying');
+		}
+		print(details?.requestId);
+	});
 }
 ```
 
@@ -95,9 +104,10 @@ The details table contains additional information about the event. Example:
 ```
 
 ### Awesome
+
 Checkout [Awesome Web Monetization](https://github.com/thomasbnt/awesome-web-monetization) for more tools, packages, tutorials, etc.  
 Install [Akita](https://github.com/esse-dev/akita) to explore how Web Monetization works.  
-Sign-up for [Coil](https://coil.com/) to start sending micro-payments now!  
+Sign-up for [Coil](https://coil.com/) to start sending micro-payments now!
 
 <p align="center" class="h4">
   TypeScript :heart: Defold
